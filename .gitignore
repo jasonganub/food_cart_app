@@ -63,3 +63,7 @@ target/
 
 # Keys
 etc/
+
+# Unnecessary files
+.DS_Store
+db.sqlite3
