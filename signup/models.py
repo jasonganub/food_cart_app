@@ -1,26 +1,22 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractBaseUser
 
 
 # The fields (first_name, last_name, username, email) will be
 # accesed via the built in User model.
-class Seeker(models.Model):
-    user = models.OneToOneField(User)
-    user.first_name = models.CharField(max_length=30)
-    user.last_name = models.CharField(max_length=30)
-    user.username = models.CharField(max_length=150)
-    user.email = models.EmailField(max_length=100)
-    user.password = models.CharField(max_length=100)
+class Seeker(AbstractBaseUser):
+    user_name = models.CharField(max_length=50, unique=True)
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    email = models.EmailField(
+        verbose_name='email address',
+        max_length=255,
+        unique=True,
+    )
 
-    @classmethod
-    def create(cls, firstname, lastname, username, email, password):
-        new_seeker = cls(
-            first_name=firstname,
-            last_name=lastname,
-            username=username,
-            email=email,
-            password=password)
-        return new_seeker
+    USERNAME_FIELD = 'user_name'
+    REQUIRED_FIELDS = ['user_name', 'first_name', 'last_name',
+        'email', 'password']
 
     def __str__(self):
-        return self.user.username
+        return self.user_name
