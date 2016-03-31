@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 # accesed via the built in User model.
 class Seeker(models.Model):
     user = models.OneToOneField(User)
+    location = models.CharField(max_length=100)
 
     def __str__(self):
         return self.user.username
