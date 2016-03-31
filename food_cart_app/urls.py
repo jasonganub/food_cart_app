@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from signup import urls
+from django.views.generic import TemplateView
 
 
 urlpatterns = [
