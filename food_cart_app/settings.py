@@ -77,6 +77,10 @@ DATABASES = {
     }
 }
 
+TEMPLATE_DIRS = [(
+    'templates'
+)]
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
