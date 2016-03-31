@@ -65,6 +65,11 @@ WSGI_APPLICATION = 'food_cart_app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
+TEMPLATES = [{
+    'BACKEND': 'django.template.backends.django.DjangoTemplates',
+    'DIRS': [os.path.join(BASE_DIR, 'templates')],
+}]
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
