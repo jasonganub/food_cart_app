@@ -1,5 +1,4 @@
 import googlemaps
-from datetime import datetime
 
 def get_key():
 	key_file = open('..\etc\google_map_key.txt', 'r')
@@ -7,3 +6,7 @@ def get_key():
 
 	return google_key
 
+def get_googlemap_client():
+	gmaps = googlemaps.Client(key=get_key())
+
+	return gmaps
