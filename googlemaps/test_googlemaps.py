@@ -14,6 +14,9 @@ my_address = '1600 Amphitheatre Parkway, Mountain View, CA'
 # geocode_result = gmaps.geocode('1600 Amphitheatre Parkway, Mountain View, CA')
 print(gAPI.get_formatted_address(gmaps, my_address))
 print(gAPI.get_state(gmaps, my_address))
+lat, lng = gAPI.get_coordinates(gmaps, my_address)
+print(lat)
+print(lng)
 
 # Look up an address with reverse geocoding
 reverse_geocode_result = gmaps.reverse_geocode((40.714224, -73.961452))
