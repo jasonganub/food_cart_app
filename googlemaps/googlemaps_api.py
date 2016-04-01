@@ -1,8 +1,11 @@
 import googlemaps
 from datetime import datetime
 
+key_file = open('..\\etc\\google_map_key.txt', 'r')
+google_key = key_file.readline()
+
 # Replace the API key below with a valid API key.
-gmaps = googlemaps.Client(key='AIzaSyCX7cz6O-IkZo_UiZiG_yRt5eKFly-hlsM')
+gmaps = googlemaps.Client(key=google_key)
 
 # Geocoding and address
 geocode_result = gmaps.geocode('1600 Amphitheatre Parkway, Mountain View, CA')
