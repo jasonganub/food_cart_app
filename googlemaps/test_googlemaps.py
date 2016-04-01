@@ -6,10 +6,12 @@ import googlemaps_api as gAPI
 # google_key = key_file.readline()
 
 # Replace the API key below with a valid API key.
-gmaps = googlemaps.Client(key=gAPI.get_key())
+# gmaps = googlemaps.Client(key=gAPI.get_key())
+gmaps = gAPI.get_googlemap_client()
 
 # Geocoding and address
-geocode_result = gmaps.geocode('1600 Amphitheatre Parkway, Mountain View, CA')
+# geocode_result = gmaps.geocode('1600 Amphitheatre Parkway, Mountain View, CA')
+print(gAPI.get_formatted_address(gmaps, '1600 Amphitheatre Parkway, Mountain View, CA'))
 
 # Look up an address with reverse geocoding
 reverse_geocode_result = gmaps.reverse_geocode((40.714224, -73.961452))
@@ -20,14 +22,14 @@ directions_result = gmaps.directions("Sydney Town Hall",
                                      "Parramatta, NSW",
                                      mode="transit",
                                      departure_time=now)
-print(gmaps)
-print("-------------------------------------")
-print(geocode_result)
-print("-------------------------------------")
-print(geocode_result[0]['formatted_address'])
-print("-------------------------------------")
-print(geocode_result[0]['geometry']['viewport']['southwest']['lat'])
-# print(reverse_geocode_result)
-print("-------------------------------------")
-print(geocode_result[0]['geometry']['viewport']['southwest']['lng'])
-# print(directions_result)
+# print(gmaps)
+# print("-------------------------------------")
+# print(geocode_result)
+# print("-------------------------------------")
+# print(geocode_result[0]['formatted_address'])
+# print("-------------------------------------")
+# print(geocode_result[0]['geometry']['viewport']['southwest']['lat'])
+# # print(reverse_geocode_result)
+# print("-------------------------------------")
+# print(geocode_result[0]['geometry']['viewport']['southwest']['lng'])
+# # print(directions_result)

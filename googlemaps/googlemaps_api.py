@@ -7,6 +7,8 @@ def get_key():
 	return google_key
 
 def get_googlemap_client():
-	gmaps = googlemaps.Client(key=get_key())
+	return googlemaps.Client(key=get_key())
 
-	return gmaps
+
+def get_formatted_address(gmaps, address):
+	return gmaps.geocode(address)[0]['formatted_address']
