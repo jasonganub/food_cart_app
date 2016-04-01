@@ -12,3 +12,6 @@ def get_googlemap_client():
 
 def get_formatted_address(gmaps, address):
 	return gmaps.geocode(address)[0]['formatted_address']
+
+def get_state(gmaps, address):
+	return gmaps.geocode(address)[0]['address_components'][4]['short_name']
