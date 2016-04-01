@@ -9,9 +9,10 @@ import googlemaps_api as gAPI
 # gmaps = googlemaps.Client(key=gAPI.get_key())
 gmaps = gAPI.get_googlemap_client()
 
-my_address = '1600 Amphitheatre Parkway, Mountain View, CA'
+# my_address = '8800 SW Oleson Rd Portland, OR 97223'
+my_address = '2333 NE Glisan St, Portland, OR 97232'
 # Geocoding and address
-# geocode_result = gmaps.geocode('1600 Amphitheatre Parkway, Mountain View, CA')
+print(gmaps.geocode(my_address))
 print(gAPI.get_formatted_address(gmaps, my_address))
 print(gAPI.get_state(gmaps, my_address))
 lat, lng = gAPI.get_coordinates(gmaps, my_address)
