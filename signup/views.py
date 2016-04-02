@@ -1,14 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.models import User
+from .forms import SeekerModelForm
 
 # Create your views here.
 #def create_seeker(request):
     #return HttpResponse('<h1>Sign up</h1>')
-
-
-
-
 
 def create_seeker(request):
     # if this is a POST request we need to process the form data
@@ -24,7 +21,6 @@ def create_seeker(request):
 
     # if a GET (or any other method) we'll create a blank form
     else:
-        form = User()
+        form = SeekerModelForm()
 
     return render(request, 'signup.html', {'form': form})
-    

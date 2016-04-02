@@ -1,10 +1,9 @@
-from django import forms
+from django.forms import ModelForm
 from .models import Seeker
 from django.contrib.auth.models import User
 
-class SeekerModelForm(forms.ModelForm):
+class SeekerModelForm(ModelForm):
 
     class Meta:
-
-        model = User
-        fields = '__all__' 
+        model = Seeker
+        fields = '__all__'
