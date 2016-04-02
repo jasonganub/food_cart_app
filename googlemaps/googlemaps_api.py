@@ -27,3 +27,6 @@ def get_coordinates(gmaps, address):
 
 def get_zip(gmaps, address):
 	return get_formatted_address(gmaps, address).split(' ')[-2][0:5]
+
+def get_street(gmaps, address):
+	return get_formatted_address(gmaps, address).split(',')[0]
