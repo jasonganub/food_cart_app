@@ -18,16 +18,17 @@ print(gAPI.get_state(gmaps, my_address))
 lat, lng = gAPI.get_coordinates(gmaps, my_address)
 print(lat)
 print(lng)
+print(gAPI.get_zip(gmaps, my_address))
 
 # Look up an address with reverse geocoding
-reverse_geocode_result = gmaps.reverse_geocode((40.714224, -73.961452))
+# reverse_geocode_result = gmaps.reverse_geocode((40.714224, -73.961452))
 
-# Request directions via public transit
-now = datetime.now()
-directions_result = gmaps.directions("Sydney Town Hall",
-                                     "Parramatta, NSW",
-                                     mode="transit",
-                                     departure_time=now)
+# # Request directions via public transit
+# now = datetime.now()
+# directions_result = gmaps.directions("Sydney Town Hall",
+#                                      "Parramatta, NSW",
+#                                      mode="transit",
+#                                      departure_time=now)
 # print(gmaps)
 # print("-------------------------------------")
 # print(geocode_result)

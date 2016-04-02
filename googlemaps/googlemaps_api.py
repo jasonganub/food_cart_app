@@ -25,3 +25,5 @@ def get_coordinates(gmaps, address):
 
 	return latitude, longitude
 
+def get_zip(gmaps, address):
+	return get_formatted_address(gmaps, address).split(' ')[-2][0:5]
