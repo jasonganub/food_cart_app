@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Seeker
+#from .models import Seeker
 
 # Register your models here.
-admin.site.register(Seeker)
+#admin.site.register(Seeker)
