@@ -7,3 +7,12 @@ class SeekerModelForm(ModelForm):
     class Meta:
         model = Seeker
         fields = '__all__'
+
+
+class UserModelForm(ModelForm):
+
+	
+
+    class Meta:
+        model = User
+        fields = ['username','first_name','last_name', 'password']
