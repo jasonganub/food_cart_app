@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Carousel -->
+<header id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active">
+       <div class="fill" style="background-image:url('../static/img/food1.jpg');"></div>
+       <div class="container">
+        <div class="carousel-caption">
+          <h1>Food Truck App</h1>
+          <p>This is the best food truck app ever.</p>
+          <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+       <div class="fill" style="background-image:url('../static/img/food2.jpg');"></div>
+       <div class="container">
+        <div class="carousel-caption">
+          <h1>Instant live locations!</h1>
+          <p>You'll always get the current location.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+       <div class="fill" style="background-image:url('../static/img/food3.jpg');"></div>
+       <div class="container">
+        <div class="carousel-caption">
+          <h1>Hours and menus</h1>
+          <p>Why commute just to see the menu?</p>
+        </div>
+    </div>
+    </div>
+
+    <!-- Navigation controls for the carousel -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</header>
+{% endblock %}
