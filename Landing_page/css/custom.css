@@ -1,0 +1,4 @@
+/* Auto adjusts the image height when changing the width */
+.carousel-inner > .item > img {
+  height: auto;
+}
