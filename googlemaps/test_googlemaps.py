@@ -12,10 +12,15 @@ gmaps = gAPI.get_googlemap_client()
 # my_address = '8800 SW Oleson Rd Portland, OR 97223'
 # my_address = '2333 NE Glisan St, Portland, OR 97232'
 my_address = '2624 NE Alberta St, Portland, OR 97211'
+
 # Geocoding and address
+print("Full Json info:")
 print(gmaps.geocode(my_address))
+print()
+print("Formated address: ", end='')
 print(gAPI.get_formatted_address(gmaps, my_address))
-print(gAPI.get_state(gmaps, my_address))
+
+print("State: ", gAPI.get_state(gmaps, my_address))
 lat, lng = gAPI.get_coordinates(gmaps, my_address)
 print(lat)
 print(lng)
@@ -23,7 +28,10 @@ print(gAPI.get_zip(gmaps, my_address))
 print(gAPI.get_street(gmaps, my_address))
 
 # Look up an address with reverse geocoding
-# reverse_geocode_result = gmaps.reverse_geocode((40.714224, -73.961452))
+#reverse_geocode_result = gmaps.reverse_geocode((40.714224, -73.961452))
+location = (40.714224, -73.961452)
+reverse_geocode_result = gAPI.get_address(gmaps, location)
+print("Address at coordinate {0} = {1}".format(location, reverse_geocode_result))
 
 # # Request directions via public transit
 # now = datetime.now()

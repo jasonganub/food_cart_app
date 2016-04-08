@@ -26,7 +26,11 @@ def get_coordinates(gmaps, address):
 	return latitude, longitude
 
 def get_zip(gmaps, address):
-	return get_formatted_address(gmaps, address).split(' ')[-2][0:5]
+	return get_formatted_address(gmaps, address).split(',')[-2].split(' ')[-1]
 
 def get_street(gmaps, address):
 	return get_formatted_address(gmaps, address).split(',')[0]
+	
+""" Function returns the human readable address from a location coordinate (lat, lng) """
+def get_address(gmaps, location):
+	return gmaps.reverse_geocode(location)[0]['formatted_address']
