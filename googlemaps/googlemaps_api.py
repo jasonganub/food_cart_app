@@ -32,5 +32,5 @@ def get_street(gmaps, address):
 	return get_formatted_address(gmaps, address).split(',')[0]
 	
 """ Function returns the human readable address from a location coordinate (lat, lng) """
-def get_address(gmaps, location):
+def get_address_from_coord(gmaps, location):
 	return gmaps.reverse_geocode(location)[0]['formatted_address']
