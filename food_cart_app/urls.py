@@ -11,6 +11,7 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^', TemplateView.as_view(template_name='landing_page.html')),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^$', TemplateView.as_view(template_name='landing_page.html')),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^signup/', include('signup.urls')),
 ]

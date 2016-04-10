@@ -121,10 +121,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-<<<<<<< HEAD
-#TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'signup/templates')]
-=======
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
->>>>>>> front_end
