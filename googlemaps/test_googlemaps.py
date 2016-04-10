@@ -30,10 +30,10 @@ print(gAPI.get_street(gmaps, my_address))
 # Look up an address with reverse geocoding
 #reverse_geocode_result = gmaps.reverse_geocode((40.714224, -73.961452))
 location = (40.714224, -73.961452)
-reverse_geocode_result = gAPI.get_address(gmaps, location)
+reverse_geocode_result = gAPI.get_address_from_coord(gmaps, location)
 print("Address at coordinate {0} = {1}".format(location, reverse_geocode_result))
 
-# # Request directions via public transit
+# Request directions via public transit
 # now = datetime.now()
 # directions_result = gmaps.directions("Sydney Town Hall",
 #                                      "Parramatta, NSW",
