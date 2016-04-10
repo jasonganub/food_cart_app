@@ -10,6 +10,7 @@
   <form action="/signup/" method="post">
     {% csrf_token %}
     {{ form }}
+    {{ seeker }}
     <input type="submit" value="Submit" />
 </form>
 
