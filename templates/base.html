@@ -5,6 +5,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <meta name="google-signin-client_id" content="118281423263-9joo01g2iu3t1gsl1jeac97a2oh78eai.apps.googleusercontent.com">
 		<title>Food Truck</title>
 
 		<!-- Bootstrap Core CSS -->
@@ -55,6 +56,10 @@
 								<li><a href="#">Find</a></li>
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
+							<!-- Google sign in button-->
+							<div class="g-signin2" data-onsuccess="onSignIn"></div>
+							<li><a href="#" onclick="signOut();">Sign out</a></li>
+							<!-- /Google sign in button-->
 								<li><a href="#">Login</a></li>
 							</ul>
 						</div>
@@ -76,5 +81,26 @@
 	  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	  <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
 
+	  <!-- Google Platform library for google sign in-->
+	  <script src="https://apis.google.com/js/platform.js" async defer></script>
+	  <script>
+		function onSignIn(googleUser) {
+			var profile = googleUser.getBasicProfile();
+			console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+			console.log('Name: ' + profile.getName());
+			console.log('Given Name: ' + profile.getGivenName());
+			console.log('Family Name: ' + profile.getFamilyName());
+			console.log('Image URL: ' + profile.getImageUrl());
+			console.log('Email: ' + profile.getEmail());
+			
+		}
+		
+		function signOut() {
+			var auth2 = gapi.auth2.getAuthInstance();
+			auth2.signOut().then(function () {
+				console.log('User signed out.');
+			});
+		}
+	  </script>
 	</body>
 </html>
