@@ -5,6 +5,11 @@ body {
     padding-top: 70px;
 }
 
+ul
+{
+    list-style-type: none;
+}
+
 .carousel,
 .item,
 .active {
