@@ -2,6 +2,7 @@
 html,
 body {
     height: 100%;
+    padding-top: 70px;
 }
 
 .carousel,
@@ -24,5 +25,3 @@ body {
     -o-background-size: cover;
 
 }
-
-

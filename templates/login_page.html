@@ -2,38 +2,41 @@
 
 {% block content %}
 <form name="myForm" action="" method="post">
-     <fieldset>
-        <div class="container-fluid"--> <!--bootstrap container fixed width. If we don't have this fieldset the form will not have a margin-->
-            <!--section class="container"--> <!--bootstrap container full width. This code puts fieldset into another container, aesthetics purposes-->
-                <div class="container-page">
-                    <div class="col-lg-12"> <!--grid columns size large 12 out of 12, div block element expands to 100% width. I wanted something to the   title div large and centered-->
-                        <legend align="center" class="dark-grey"> <b> Login </b> </legend>
-                        <!--class form-control" needs to be added to reference bootstrap css. It makes the squared fields rounded-->
+  <fieldset>
+    <div class="container-fluid"--> <!--bootstrap container fixed width. If we don't have this fieldset the form will not have a margin-->
+      <!--section class="container"--> <!--bootstrap container full width. This code puts fieldset into another container, aesthetics purposes-->
+      <div class="container-page">
+        <div class="col-lg-12"> <!--grid columns size large 12 out of 12, div block element expands to 100% width. I wanted something to the   title div large and centered-->
+          <legend align="center" class="dark-grey"> <b> Login </b> </legend>
+          <!--class form-control" needs to be added to reference bootstrap css. It makes the squared fields rounded-->
 
-                        <div align="center" class="form-group col-lg-12"><!--reference for form group http://www.w3schools.com/bootstrap/bootstrap_forms.asp-->
-                            <label align="left"> Username: <br>
-                            <input type="text" name="username" class="form-control" /></label><br>
-                        </div>
+          <div align="center" class="form-group col-lg-12"><!--reference for form group http://www.w3schools.com/bootstrap/bootstrap_forms.asp-->
+            <label align="left"> Username: <br>
+              <input type="text" name="username" class="form-control" /></label><br>
+            </div>
 
-                        <div align="center"  class="form-group col-lg-12">
-                            <label align="left"> Password: <br>
-                            <input type="text" name="password" class="form-control" /></label><br>
-                        </div>
-                        <br>
-                        <div align="center" class="form-group col-lg-12">
-                            <label align="right"> <a href="#">Forgot password?</a></label>
-                        </div>
-                        <br>
-                        <!-- class="btn btn-primary" needs to be added to reference css bootstrap-->
-                        <div class="col-lg-12" align="center">
-                            <button type="submit" class="btn btn-primary">Login</button>
-                        </div>
+            <div align="center"  class="form-group col-lg-12">
+              <label align="left"> Password: <br>
+                <input type="text" name="password" class="form-control" /></label><br>
+              </div>
+              <br>
+              <div align="center" class="form-group col-lg-12">
+                <label align="right"> <a href="#">Forgot password?</a></label>
+              </div>
+              <br>
+              <!-- class="btn btn-primary" needs to be added to reference css bootstrap-->
+              <div class="col-lg-12" align="center">
+                <ul>
+                  <li><button type="submit" class="btn btn-primary">Login</button></li>
+                  <!-- /Google sign in button-->
+                  <li><div class="g-signin2" data-onsuccess="onSignIn"><a href="#">Login</a></div></li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-                    </div>
-                </div>
-
-            <!--/section-->
+          <!--/section-->
         </div>
-    </fieldset>   
-</form>
-{% endblock %}
+      </fieldset>
+    </form>
+    {% endblock %}
