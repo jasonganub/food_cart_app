@@ -2,7 +2,10 @@
 html,
 body {
     height: 100%;
-    padding-top: 70px;
+}
+
+.form-padding {
+  padding-top: 90px;
 }
 
 ul
