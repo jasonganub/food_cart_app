@@ -63,3 +63,6 @@ target/
 
 # Keys
 etc/
+
+# Others
+*.DS_Store
