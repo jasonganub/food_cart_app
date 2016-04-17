@@ -8,13 +8,12 @@ body {
   color: #5a5a5a;
 }
 
-.form-padding {
-  padding-top: 90px;
+ul {
+    list-style-type: none;
 }
 
-ul
-{
-    list-style-type: none;
+.form-padding {
+  padding-top: 90px;
 }
 
 /* Carousel styling */
