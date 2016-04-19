@@ -2,13 +2,6 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
-body {
-  height: 100%;
-  padding-bottom: 40px;
-  background-color: #f5f5f5;
-  color: #5a5a5a;
-}
-
 ul {
     list-style-type: none;
 }
