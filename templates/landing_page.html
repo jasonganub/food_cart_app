@@ -1,54 +1,113 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<!-- Carousel -->
-<header id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="item active">
-       <div class="fill" style="background-image:url('../static/img/food1.jpg');"></div>
-       <div class="container">
-        <div class="carousel-caption">
+<!-- Header -->
+<a name="about"></a>
+<div class="intro-header">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="intro-message">
           <h1>Food Truck App</h1>
-          <p>This is the best food truck app ever.</p>
-          <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up</a></p>
+          <h3>Discover local food trucks within seconds.</h3>
+          <hr class="intro-divider">
+          <ul class="list-inline intro-social-buttons">
+            <li>
+              <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+            </li>
+            <li>
+              <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+            </li>
+            <li>
+              <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <div class="item">
-       <div class="fill" style="background-image:url('../static/img/food2.jpg');"></div>
-       <div class="container">
-        <div class="carousel-caption">
-          <h1>Instant live locations!</h1>
-          <p>You'll always get the current location.</p>
-        </div>
+  </div>
+  <!-- /.container -->
+
+</div>
+<!-- /.intro-header -->
+
+
+<!-- Page Content -->
+
+<a  name="services"></a>
+<div class="content-section-a">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-sm-6">
+        <hr class="section-heading-spacer">
+        <div class="clearfix"></div>
+        <h2 class="section-heading">Browse or Discover 
+        <p class="lead">Browse through different types of food trucks or search for trucks around your area.</p>
+      </div>
+      <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+        <img class="img-responsive" src="/static/img/discover.png" alt="location section">
       </div>
     </div>
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.content-section-a -->
 
-    <div class="item">
-       <div class="fill" style="background-image:url('../static/img/food3.jpg');"></div>
-       <div class="container">
-        <div class="carousel-caption">
-          <h1>Hours and menus</h1>
-          <p>Why commute just to see the menu?</p>
-        </div>
+<div class="content-section-b">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+        <hr class="section-heading-spacer">
+        <div class="clearfix"></div>
+        <h2 class="section-heading">Live locations and hours
+        <p class="lead">Always be aware of the latest updates directly from the food truck owners. You'll never miss out on another opportunity.</p>
+      </div>
+      <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+        <img class="img-responsive" src="/static/img/location.png" alt="menu section">
+      </div>
     </div>
-    </div>
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.content-section-b -->
 
-    <!-- Navigation controls for the carousel -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-</header>
+<a name="services"></a>
+<div class="content-section-a">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-sm-6">
+        <hr class="section-heading-spacer">
+        <div class="clearfix"></div>
+        <h2 class="section-heading">Access to the menus</h2>
+        <p class="lead">See the full menu before making the decision to drive out to the food truck.</p>
+      </div>
+      <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+        <img class="img-responsive" src="/static/img/menu.png" alt="menu section">
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.content-section-a -->
+
+<div class="content-section-b">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+        <hr class="section-heading-spacer">
+        <div class="clearfix"></div>
+        <h2 class="section-heading">Trusted reviews
+        <p class="lead">Hear first from your fellow locals to get the best experience possible.</p>
+      </div>
+      <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+        <img class="img-responsive" src="/static/img/reviews.png" alt="menu section">
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.content-section-b -->
+
 {% endblock %}
