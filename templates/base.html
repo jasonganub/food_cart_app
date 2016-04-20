@@ -48,7 +48,6 @@
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li><a href="/">Home</a></li>
 						<li><a href="#">Discover</a></li>
 						<li><a href="#">About</a></li>
 						<li><a href="#">Contact</a></li>
@@ -61,24 +60,37 @@
 			</div>
 		</nav>
 
-
     <!-- BLOCK CONTENT -->
     {% block content %}
     {% endblock %}
 
-    <!-- START THE FEATURETTES -->
-
-    <hr class="featurette-divider">
-
-    <!-- /END THE FEATURETTES -->
-
-    <div class="container marketing">
-			<!-- FOOTER -->
-	    <footer>
-	  		<p class="pull-right"><a href="#">Back to top</a></p>
-	    	<p>&copy; 2016 Food Truck App. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-	    </footer>
-  	</div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#about">Discover</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#services">About</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 		<!-- Bootstrap core JavaScript
 	  ================================================== -->
