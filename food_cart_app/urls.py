@@ -4,9 +4,6 @@ from rest_framework import routers
 from login import views
 from django.views.generic import TemplateView
 
-router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
 
 urlpatterns = [
     # Examples:
