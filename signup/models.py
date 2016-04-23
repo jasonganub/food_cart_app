@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 
 class Seeker(models.Model):
     user = models.OneToOneField(User)
-    location = models.CharField(max_length=100)
+    location = models.CharField(max_length=100, blank=True)
 
     def __str__(self):
         return self.user.username
