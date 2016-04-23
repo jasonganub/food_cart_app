@@ -61,7 +61,7 @@ ROOT_URLCONF = 'food_cart_app.urls'
 
 WSGI_APPLICATION = 'food_cart_app.wsgi.application'
 
-
+APPEND_SLASH = False
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 

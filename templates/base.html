@@ -53,10 +53,16 @@
 					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
-				<div class="navbar-form navbar-right">
+					<div class="navbar-form navbar-right">
+				{% if user.is_authenticated %}
+				<a class="btn btn-primary" href="/logout/">Logout</a>
+				{% else %}
+			
 					<a class="btn btn-primary" href="/signup/">Sign up</a>
 					<a class="btn btn-default" href="/login/">Sign in</a>
-				</div>
+			
+				{% endif %}
+					</div>
 			</div>
 		</div>
 	</nav>

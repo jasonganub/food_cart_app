@@ -39,4 +39,4 @@ def create_seeker(request):
         user_form = UserModelForm()
         seeker_form = SeekerModelForm()
 
-    return render(request, 'signup_page.html', {'user_form': user_form, 'seeker_form': seeker_form})
+    return render(request, 'registration.html', {'user_form': user_form, 'seeker_form': seeker_form})
