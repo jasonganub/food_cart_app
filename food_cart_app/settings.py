@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'login',
     'signup',
     'rest_framework',
+    'welcome_page',
 )
 
 MIDDLEWARE_CLASSES = (
