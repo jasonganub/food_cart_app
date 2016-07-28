@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <form name="myForm" method="post" class="form-signin" action="{% url 'django.contrib.auth.views.login' %}">
+    <div class="container-fluid form-padding"> 
+      <legend align="center" class="dark-grey"> <b> Login </b> </legend>
+              {% csrf_token %}
+      <!--class form-control" needs to be added to reference bootstrap css. It makes the squared fields rounded-->
+      <input type="text" id="id_username" name="username" placeholder="username" class="form-control input-block-level" /></label><br>
+      <input type="password" id="id_password" name="password" placeholder="password" class="form-control input-block-level" /></label><br>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+      <br>
+
+
+      <label align="right"> <a href="#">Forgot password?</a></label>
+
+      <br>
+      <!-- class="btn btn-primary" needs to be added to reference css bootstrap-->
+      <div class="button-align"><button type="submit" class="btn btn-large btn-primary">Login</button></div>
+      <!-- /Google sign in button-->
+      <div class="g-signin2" data-onsuccess="onSignIn"><a href="#">Login</a></div>
+    </div>
+  </form>
+</div>
+{% endblock %}

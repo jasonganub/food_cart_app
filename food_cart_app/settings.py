@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'login',
     'signup',
     'rest_framework',
+    'welcome_page',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -61,7 +62,7 @@ ROOT_URLCONF = 'food_cart_app.urls'
 
 WSGI_APPLICATION = 'food_cart_app.wsgi.application'
 
-
+APPEND_SLASH = False
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
@@ -124,3 +125,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+
+# Redirect user to welcome page
+
+LOGIN_REDIRECT_URL = '/welcome/'
