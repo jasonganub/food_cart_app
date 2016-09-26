@@ -2,6 +2,11 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
+
+body {
+	padding-top: 60px;
+}
+
 ul {
     list-style-type: none;
 }
@@ -101,7 +106,7 @@ h6 {
 }
 
 .topnav {
-    font-size: 14px; 
+    font-size: 14px;
 }
 
 .lead {
@@ -326,4 +331,3 @@ p.copyright {
     font-size: 18px;
     line-height: 1.5;
   }
-

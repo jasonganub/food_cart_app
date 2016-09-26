@@ -35,11 +35,13 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'login',
-    'signup',
-    'rest_framework',
+    # third party apps
+    'crispy_forms',
+    'registration',
+    # my apps
     'welcome_page',
 )
 
@@ -52,11 +54,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
-
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
-    'PAGE_SIZE': 10
-}
 
 ROOT_URLCONF = 'food_cart_app.urls'
 
@@ -130,3 +127,12 @@ STATICFILES_DIRS = (
 # Redirect user to welcome page
 
 LOGIN_REDIRECT_URL = '/welcome/'
+
+# Django Registration Redux settings
+REGISTRATION_OPEN = True
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
+LOGIN_URL = '/accounts/login/'
+
+# Crispy form tag settings
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
