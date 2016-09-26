@@ -38,9 +38,6 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # third party apps
-    'crispy_forms',
-    'registration',
     # my apps
     'welcome_page',
 )
@@ -125,14 +122,4 @@ STATICFILES_DIRS = (
 
 
 # Redirect user to welcome page
-
 LOGIN_REDIRECT_URL = '/welcome/'
-
-# Django Registration Redux settings
-REGISTRATION_OPEN = True
-ACCOUNT_ACTIVATION_DAYS = 7
-REGISTRATION_AUTO_LOGIN = True
-LOGIN_URL = '/accounts/login/'
-
-# Crispy form tag settings
-CRISPY_TEMPLATE_PACK = 'bootstrap3'
