@@ -10,7 +10,7 @@ def register_user(request):
 		form = UserForm(request.POST)
 		if form.is_valid():
 			new_user = User.objects.create_user(**form.cleaned_data)
-			new_user = authenticate(username=new_user.username, password=new_user.password)
+			new_user = authenticate(username=form.cleaned_data['username'], password=form.cleaned_data['password'])
 			if new_user:
 				login(request, new_user)
 				# redirect, or however you want to get to the main view
