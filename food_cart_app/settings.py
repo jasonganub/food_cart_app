@@ -39,8 +39,12 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # my apps
-    'welcome_page',
+    'seeker',
+    # 3rd party apps
+    'crispy_forms',
 )
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -122,4 +126,4 @@ STATICFILES_DIRS = (
 
 
 # Redirect user to welcome page
-LOGIN_REDIRECT_URL = '/welcome/'
+LOGIN_REDIRECT_URL = '/login/'
