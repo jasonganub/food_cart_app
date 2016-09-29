@@ -57,9 +57,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'food_cart_app.urls'
-
-WSGI_APPLICATION = 'food_cart_app.wsgi.application'
+ROOT_URLCONF = 'food_cart_app.urls'_APPLICATION = 'food_cart_app.wsgi.application'
 
 APPEND_SLASH = False
 # Database
@@ -137,6 +135,8 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # HEROKU
 # Simplified static file serving.
