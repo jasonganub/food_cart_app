@@ -7,8 +7,8 @@ urlpatterns = [
     # Examples:
     # url(r'^$', 'food_cart_app.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-    url(r'^register/', include('seeker.urls')),
-    url(r'^login/', TemplateView.as_view(template_name='login.html')),
+    url(r'^accounts/register/', include('seeker.urls'), name='signup'),
+    url(r'^accounts/login/', 'django.contrib.auth.views.login', name='login'),
     url(r'^', TemplateView.as_view(template_name='landing_page.html')),
     url(r'^admin/', include(admin.site.urls)),
 ]

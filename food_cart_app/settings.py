@@ -35,7 +35,6 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # my apps
@@ -124,6 +123,5 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-
-# Redirect user to welcome page
-LOGIN_REDIRECT_URL = '/login/'
+# Login Authentication
+APPEND_SLASH = False
