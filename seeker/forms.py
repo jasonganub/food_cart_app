@@ -7,6 +7,9 @@ class UserForm(ModelForm):
 	class Meta:
 		model = User
 		fields = ['username', 'email', 'password']
+		help_texts = {
+            'username': None,
+        }
 
 	def __init__(self, *args, **kwargs):
 		super(UserForm, self).__init__(*args, **kwargs)
