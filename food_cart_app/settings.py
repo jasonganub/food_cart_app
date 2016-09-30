@@ -57,7 +57,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'food_cart_app.urls'_APPLICATION = 'food_cart_app.wsgi.application'
+ROOT_URLCONF = 'food_cart_app.urls'
+WSGI_APPLICATION = 'food_cart_app.wsgi.application'
 
 APPEND_SLASH = False
 # Database
