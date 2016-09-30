@@ -21,7 +21,7 @@ DEBUG = bool(os.environ.get('DJANGO_DEBUG', ''))
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # SECURITY WARNING: keep the secret key used in production secret!
 if DEBUG:
