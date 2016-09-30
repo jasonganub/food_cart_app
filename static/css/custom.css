@@ -17,20 +17,18 @@ ul {
 
 /* Forms */
 
-.registration-form {
-	min-width: 400px;
+.authentication-form {
 	max-width: 400px;
 	margin: 0 auto;
 }
 
-.registration-form h1 {
+.authentication-form h1 {
 	text-align: center;
 	padding-bottom: 20px;
 }
 
 .signup-login-btn {
-	min-width: 370px;
-	max-width: 400px;
+	width: 100%;
 	height: 50px;
 	margin: 0 auto;
 	font-size: 15px;
