@@ -23,10 +23,10 @@ DEBUG = bool(os.environ.get('DJANGO_DEBUG', ''))
 TEMPLATE_DEBUG = True
 
 # SECURITY WARNING: keep the secret key used in production secret!
-if DEBUG:
+try:
     with open('etc/secret_key.txt') as f:
         SECRET_KEY = f.read().strip()
-else:
+except:
     SECRET_KEY = os.environ['SECRET_KEY']
 
 # Application definition
