@@ -18,7 +18,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get('DJANGO_DEBUG', ''))
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', 'True'))
 
 TEMPLATE_DEBUG = True
 
