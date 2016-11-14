@@ -7,3 +7,6 @@ class Owner(models.Model):
 
     # TODO: add menu and location
     # name, hours, culture/ethnic type
+
+    def __str__(self):
+        return self.name
