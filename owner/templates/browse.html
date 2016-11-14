@@ -4,6 +4,14 @@
 
 <div class="col-lg-12">
   <h1><center>Browse Page</center></h1>
+
+  {% if list_of_trucks %}
+    <ul>
+      {% for truck in list_of_trucks%}
+        <li>{{truck.name}}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 </div>
 
 {% endblock %}
