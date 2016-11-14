@@ -2,16 +2,21 @@
 
 {% block content %}
 
-<div class="col-lg-12">
-  <h1><center>Browse Page</center></h1>
+<h1><center>Browse Page</center></h1>
 
-  {% if list_of_trucks %}
-    <ul>
-      {% for truck in list_of_trucks%}
-        <li>{{truck.name}}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-</div>
+{% if list_of_trucks %}
+  <table class="table table-striped">
+    <tr>
+      <th>Name</th>
+      <th>Ethnic</th>
+    </tr>
+    {% for truck in list_of_trucks %}
+      <tr>
+        <td>{{truck.name}}</td>
+        <td>{{truck.ethnic}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endif %}
 
 {% endblock %}
