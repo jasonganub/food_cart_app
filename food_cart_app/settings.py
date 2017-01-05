@@ -40,9 +40,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # my apps
     'seeker',
-    'owner',
     # 3rd party apps
     'crispy_forms',
+    'openinghours',
 )
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'

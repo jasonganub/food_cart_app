@@ -2,3 +2,4 @@ Django==1.8
 django-crispy-forms==1.6.0
 dj-database-url==0.4.1
 whitenoise==3.2.3
+django-openinghours
