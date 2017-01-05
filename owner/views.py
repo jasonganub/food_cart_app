@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Owner
+from .models import Owner, OpeningHours
 
 
 def browse_trucks(request):

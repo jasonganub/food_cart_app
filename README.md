@@ -11,3 +11,7 @@ Testing
 2. run
 
 './manage.py test'
+
+
+Packages used or referenced from:
+django-openinghours: https://github.com/arteria/django-openinghours
