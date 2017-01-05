@@ -4,4 +4,5 @@ gunicorn
 dj-database-url==0.4.1
 whitenoise==3.2.3
 psycopg2
-django-openinghours
+django-openinghours==0.1.2
+django-localflavor==1.4

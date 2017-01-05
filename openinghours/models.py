@@ -4,6 +4,9 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.utils.encoding import python_2_unicode_compatible
 from openinghours.app_settings import PREMISES_MODEL
+from django.core.validators import RegexValidator
+from localflavor.us.models import USStateField, USPostalCodeField, USZipCodeField
+
 
 # isoweekday
 WEEKDAYS = [
@@ -27,8 +30,15 @@ class Company(models.Model):
         verbose_name = _('Company')
         verbose_name_plural = _('Companies')
 
-    name = models.CharField(_('Name'), max_length=100)
-    ethnic = models.CharField(_('Ethnic'), max_length=100)
+    name = models.CharField(_('Name'), max_length=100, blank=True)
+    ethnic = models.CharField(_('Ethnic'), max_length=100, blank=True)
+    address1 = models.CharField(_('Address1'), max_length=100, blank=True)
+    address2 = models.CharField(_('Address2'), max_length=100, blank=True)
+    city = models.CharField(_('City'), max_length=100, blank=True)
+    state = USStateField(_('State'), blank=True)
+    zip_code = USZipCodeField(blank=True)
+    phone = models.CharField(_('Phone'), primary_key=True, max_length=10, validators=[RegexValidator(r'^\d{1,10}$')], blank=True)
+    website = models.CharField(_('Website'), max_length=100, blank=True)
     logo = models.FileField(_('Logo'), upload_to='logo', null=True, blank=True)
 
     def __str__(self):
