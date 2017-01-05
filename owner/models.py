@@ -1,4 +1,16 @@
 from django.db import models
+from django.utils.translation import gettext as _
+
+
+WEEKDAYS = [
+  (1, _("Monday")),
+  (2, _("Tuesday")),
+  (3, _("Wednesday")),
+  (4, _("Thursday")),
+  (5, _("Friday")),
+  (6, _("Saturday")),
+  (7, _("Sunday")),
+]
 
 
 class Owner(models.Model):
@@ -20,13 +32,3 @@ class OpeningHours(models.Model):
     )
     from_hour = models.TimeField()
     to_hour = models.TimeField()
-
-WEEKDAYS = [
-  (1, _("Monday")),
-  (2, _("Tuesday")),
-  (3, _("Wednesday")),
-  (4, _("Thursday")),
-  (5, _("Friday")),
-  (6, _("Saturday")),
-  (7, _("Sunday")),
-]
