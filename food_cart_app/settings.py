@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'seeker',
     # 3rd party apps
     'crispy_forms',
+    'openinghours',
 )
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
@@ -62,20 +63,6 @@ WSGI_APPLICATION = 'food_cart_app.wsgi.application'
 APPEND_SLASH = False
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
-
-TEMPLATES = [{
-    'BACKEND': 'django.template.backends.django.DjangoTemplates',
-    'DIRS': [os.path.join(BASE_DIR, 'templates')],
-    'APP_DIRS': True,
-    'OPTIONS': {
-        'context_processors': [
-            'django.template.context_processors.debug',
-            'django.template.context_processors.request',
-            'django.contrib.auth.context_processors.auth',
-            'django.contrib.messages.context_processors.messages',
-        ],
-    },
-}]
 
 DATABASES = {
     'default': {
