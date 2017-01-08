@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # my apps
     'seeker',
+    'query'
     # 3rd party apps
     'crispy_forms',
     'openinghours',
