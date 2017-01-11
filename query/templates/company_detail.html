@@ -3,6 +3,7 @@
 
 <div class="container">
   <h1>{{ company.name}}</h1>
+  <img src={{ company.logo.url }}>
   <ul>
     {% for hour in opening_hours %}
       {% if hour.weekday == 1 %}
