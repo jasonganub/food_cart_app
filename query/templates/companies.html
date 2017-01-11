@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Companies</h1>
-<ul>
-  {% for company in companies %}
-  <li>{{ company.name }}</li>
-  {% endfor %}
+<div class="container">
+  <h1>Companies</h1>
+  <ul>
+    {% for company in companies %}
+    <li>{{ company.name }}</li>
+    {% endfor %}
 
-</ul>
+  </ul>
+</div>
 
 {% endblock %}

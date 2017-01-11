@@ -15,15 +15,11 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='closingrules',
-            options={'verbose_name_plural': 'Closing Rules', 'ordering': ['start'], 'verbose_name': 'Closing Rule'},
+            options={'verbose_name': 'Closing Rule', 'verbose_name_plural': 'Closing Rules', 'ordering': ['start']},
         ),
         migrations.AlterModelOptions(
             name='openinghours',
-            options={'verbose_name_plural': 'Opening Hours', 'ordering': ['company', 'weekday', 'from_hour'], 'verbose_name': 'Opening Hours'},
-        ),
-        migrations.RemoveField(
-            model_name='company',
-            name='id',
+            options={'verbose_name': 'Opening Hours', 'verbose_name_plural': 'Opening Hours', 'ordering': ['company', 'weekday', 'from_hour']},
         ),
         migrations.RemoveField(
             model_name='company',
@@ -32,37 +28,37 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='company',
             name='address1',
-            field=models.CharField(max_length=100, blank=True, verbose_name='Address1'),
+            field=models.CharField(max_length=100, verbose_name='Address1', blank=True),
         ),
         migrations.AddField(
             model_name='company',
             name='address2',
-            field=models.CharField(max_length=100, blank=True, verbose_name='Address2'),
+            field=models.CharField(max_length=100, verbose_name='Address2', blank=True),
         ),
         migrations.AddField(
             model_name='company',
             name='city',
-            field=models.CharField(max_length=100, blank=True, verbose_name='City'),
+            field=models.CharField(max_length=100, verbose_name='City', blank=True),
         ),
         migrations.AddField(
             model_name='company',
             name='ethnic',
-            field=models.CharField(max_length=100, blank=True, verbose_name='Ethnic'),
+            field=models.CharField(max_length=100, verbose_name='Ethnic', blank=True),
         ),
         migrations.AddField(
             model_name='company',
             name='phone',
-            field=models.CharField(max_length=10, blank=True, primary_key=True, verbose_name='Phone', serialize=False, validators=[django.core.validators.RegexValidator('^\\d{1,10}$')]),
+            field=models.CharField(max_length=10, verbose_name='Phone', validators=[django.core.validators.RegexValidator('^\\d{1,10}$')], blank=True),
         ),
         migrations.AddField(
             model_name='company',
             name='state',
-            field=localflavor.us.models.USStateField(max_length=2, blank=True, verbose_name='State'),
+            field=localflavor.us.models.USStateField(max_length=2, verbose_name='State', blank=True),
         ),
         migrations.AddField(
             model_name='company',
             name='website',
-            field=models.CharField(max_length=100, blank=True, verbose_name='Website'),
+            field=models.CharField(max_length=100, verbose_name='Website', blank=True),
         ),
         migrations.AddField(
             model_name='company',
@@ -82,7 +78,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='closingrules',
             name='reason',
-            field=models.TextField(blank=True, null=True, verbose_name='Reason'),
+            field=models.TextField(verbose_name='Reason', null=True, blank=True),
         ),
         migrations.AlterField(
             model_name='closingrules',
@@ -92,12 +88,12 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='company',
             name='logo',
-            field=models.FileField(blank=True, null=True, upload_to='logo', verbose_name='Logo'),
+            field=models.FileField(verbose_name='Logo', null=True, upload_to='logo', blank=True),
         ),
         migrations.AlterField(
             model_name='company',
             name='name',
-            field=models.CharField(max_length=100, blank=True, verbose_name='Name'),
+            field=models.CharField(max_length=100, verbose_name='Name', blank=True),
         ),
         migrations.AlterField(
             model_name='openinghours',

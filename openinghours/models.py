@@ -37,7 +37,7 @@ class Company(models.Model):
     city = models.CharField(_('City'), max_length=100, blank=True)
     state = USStateField(_('State'), blank=True)
     zip_code = USZipCodeField(blank=True)
-    phone = models.CharField(_('Phone'), primary_key=True, max_length=10, validators=[RegexValidator(r'^\d{1,10}$')], blank=True)
+    phone = models.CharField(_('Phone'), max_length=10, validators=[RegexValidator(r'^\d{1,10}$')], blank=True)
     website = models.CharField(_('Website'), max_length=100, blank=True)
     logo = models.FileField(_('Logo'), upload_to='logo', null=True, blank=True)
 
