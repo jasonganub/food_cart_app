@@ -5,7 +5,27 @@
   <h1>{{ company.name}}</h1>
   <ul>
     {% for hour in opening_hours %}
-    <li>{{ hour }}</li>
+      {% if hour.weekday == 1 %}
+        <li>Mon: {{ hour.from_hour }} - {{ hour.to_hour }}<li>
+      {% endif %}
+      {% if hour.weekday == 2 %}
+        <li>Tue: {{ hour.from_hour }} - {{ hour.to_hour }}<li>
+      {% endif %}
+      {% if hour.weekday == 3 %}
+        <li>Wed: {{ hour.from_hour }} - {{ hour.to_hour }}<li>
+      {% endif %}
+      {% if hour.weekday == 4 %}
+        <li>Thu: {{ hour.from_hour }} - {{ hour.to_hour }}<li>
+      {% endif %}
+      {% if hour.weekday == 5 %}
+        <li>Fri: {{ hour.from_hour }} - {{ hour.to_hour }}<li>
+      {% endif %}
+      {% if hour.weekday == 6 %}
+        <li>Sat: {{ hour.from_hour }} - {{ hour.to_hour }}<li>
+      {% endif %}
+      {% if hour.weekday == 7 %}
+        <li>Sun: {{ hour.from_hour }} - {{ hour.to_hour }}<li>
+      {% endif %}
     {% endfor %}
   </ul>
 </div>
