@@ -9,9 +9,8 @@ def display_all_companies(request):
 
 def display_company_by_id(request, id):
     if request.method == "GET":
-        import pdb; pdb.set_trace()
         company = Company.objects.get(pk=id)
         opening_hours = OpeningHours.objects.filter(company=company)
-        return render(request, 'companies.html', {'companies': companies})
+        return render(request, 'company_detail.html', {'company': company, 'opening_hours': opening_hours})
     else:
         pass

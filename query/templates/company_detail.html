@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+  <h1>{{ company.name}}</h1>
+  <ul>
+    {% for hour in opening_hours %}
+    <li>{{ hour }}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}
