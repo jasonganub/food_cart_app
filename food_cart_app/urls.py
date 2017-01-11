@@ -11,6 +11,6 @@ urlpatterns = [
     url(r'^accounts/login/', 'django.contrib.auth.views.login'),
     url(r'^accounts/logout/', 'django.contrib.auth.views.logout',
                                 {'next_page': '/'}, name='logout'),
-    url(r'^browse/', include('openinghours.urls'), name='browse'),
+    url(r'^browse/', include('query.urls'), name='browse'),
     url(r'^', TemplateView.as_view(template_name='landing_page.html')),
 ]
