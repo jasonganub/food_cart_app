@@ -5,7 +5,7 @@
   <h1>Companies</h1>
   <ul>
     {% for company in companies %}
-    <li>{{ company.name }}</li>
+    <li><a href="{{company.id}}/">{{ company.name }}<a></li>
     {% endfor %}
 
   </ul>
